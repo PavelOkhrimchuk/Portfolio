@@ -14,8 +14,8 @@ a {
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #e0e0e0;
+    background-color: #121212;
 }
 
 .header {
@@ -23,6 +23,7 @@ body {
     height: 100vh;
     background: url(https://w.wallhaven.cc/full/p8/wallhaven-p8qpye.jpg) no-repeat center center/cover;
     position: relative;
+    background-blur: 10px;
 }
 
 nav {
@@ -31,8 +32,6 @@ nav {
     justify-content: space-between;
     padding: 30px 100px;
 }
-
-
 
 nav ul {
     display: block;
@@ -47,17 +46,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffff00;
+    color: #ffeb3b;
     position: relative;
     padding: 5px 0;
     font-weight: bold;
     border-radius: 5px;
-    background-color: rgba(255, 255, 0, 0.1);
+    background-color: rgba(255, 235, 59, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #fd4766;
+    color: #ff4081;
 }
 
 nav ul li a:after {
@@ -66,7 +65,7 @@ nav ul li a:after {
     left: 0;
     width: 0;
     height: 3px;
-    background: #fd4766;
+    background: #ff4081;
     transition: 0.3s;
     bottom: 0;
 }
@@ -86,14 +85,14 @@ nav ul li a:hover:after {
     font-weight: 500;
     transition: all 0.4s ease-in-out;
     background-size: 152% 100%;
-    background: #fd4766;
-    border: 2px solid #fd4766;
+    background: #ff4081;
+    border: 2px solid #ff4081;
 }
 
 .btn:hover {
     background: transparent;
-    border-color: #fd4766;
-    color: #fd4766;
+    border-color: #ff4081;
+    color: #ff4081;
 }
 
 .content {
@@ -106,14 +105,15 @@ nav ul li a:hover:after {
 .content .btn {
     margin-top: 20px;
 }
+
 .content .title {
-    color: #0a0a0a;
+    color: #e0e0e0;
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 4px;
     display: inline-block;
     margin-bottom: 20px;
-    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
+    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #ff4081 79.69%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -126,13 +126,14 @@ nav ul li a:hover:after {
 }
 
 .content h1 span {
-    color: #fd4766;
+    color: #ff4081;
 }
 
 main {
     padding: 50px 100px;
-    background-color: #fff;
+    background-color: #1e1e1e;
 }
+
 #about-me {
     padding: 50px 0;
     text-align: left;
@@ -141,13 +142,13 @@ main {
 #about-me h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #fd4766;
+    color: #ff4081;
 }
 
 #about-me p {
     font-size: 18px;
     line-height: 1.6;
-    color: #333;
+    color: #e0e0e0;
 }
 
 #projects-skills {
@@ -163,7 +164,7 @@ main {
 .projects h2, .skills h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #fd4766;
+    color: #ff4081;
 }
 
 .project, .skills ul {
@@ -172,13 +173,13 @@ main {
 
 .project h3 {
     font-size: 24px;
-    color: #333;
+    color: #e0e0e0;
 }
 
 .project p, .skills ul li {
     font-size: 16px;
     line-height: 1.5;
-    color: #666;
+    color: #b0b0b0;
 }
 
 footer {
@@ -193,7 +194,7 @@ footer p {
 }
 
 footer a {
-    color: #ffff00;
+    color: #ffeb3b;
     text-decoration: none;
 }
 
@@ -201,12 +202,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
 #project-form {
-    background: #fff;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     margin: 20px auto;
 }
@@ -214,16 +214,18 @@ footer a:hover {
 #project-form h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #fd4766;
+    color: #ff4081;
 }
 
 #project-form input, #project-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 4px;
     margin-bottom: 15px;
     font-size: 16px;
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 #project-form textarea {
@@ -236,7 +238,7 @@ footer a:hover {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #fd4766;
+    background-color: #ff4081;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -247,11 +249,12 @@ footer a:hover {
 #project-form button:hover {
     background-color: #e03e5e;
 }
+
 #skill-form {
-    background: #fff;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     margin: 20px auto;
 }
@@ -259,16 +262,18 @@ footer a:hover {
 #skill-form h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #fd4766;
+    color: #ff4081;
 }
 
 #skill-form input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 4px;
     margin-bottom: 15px;
     font-size: 16px;
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 #skill-form button {
@@ -276,7 +281,7 @@ footer a:hover {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #fd4766;
+    background-color: #ff4081;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -294,7 +299,7 @@ footer a:hover {
     margin: 20px auto;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .slider-container {
@@ -316,9 +321,9 @@ button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border: none;
-    color: #fff;
+    color: #000;
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
@@ -333,6 +338,3 @@ button.prev {
 button.next {
     right: 10px;
 }
-
-
-
