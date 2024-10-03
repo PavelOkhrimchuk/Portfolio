@@ -6,6 +6,7 @@
     <title>Pavel Okhrimchuk Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link id="dark-theme-link" rel="stylesheet" href="dark-theme.css" disabled>
 </head>
 <body>
 <div class="header">
@@ -16,46 +17,60 @@
             <li><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
-    <div class="content">
-        <span class="title">Java Developer</span>
-        <h1>Привет, я <span>Павел Охримчук</span></h1>
-        <a href="https://github.com/PavelOkhrimchuk" class="btn">GitHub</a>
-    </div>
+</div>
+<div class="content">
+    <span class="title">Java Developer</span>
+    <h1>Привет, я <span>Павел Охримчук</span></h1>
+    <a href="https://github.com/PavelOkhrimchuk" class="btn">GitHub</a>
+</div>
 </div>
 
 <main>
+
+    <div class="theme-selector"></div>
+    <label for="theme">Выберите тему:</label>
+    <select id="theme" class="theme-select">
+        <option value="default">Светлая</option>
+        <option value="dark">Темная</option>
+
+    </select>
+
     <section id="about-me">
         <h2>Обо мне</h2>
-        <p>Павел, 19. Увлекаюсь разработкой на Java, люблю Java </p>
+        <button id = "toggle-info-btn" class="btn">Узнать подробнее</button>
+        <p id="about-info" style ="display: none;">Павел, 19. Увлекаюсь разработкой на Java, люблю Java </p>
     </section>
 
     <section id="projects-skills">
         <div class="projects">
             <h2>Проекты</h2>
-            <div class="project">
-                <h3><a href="https://github.com/PavelOkhrimchuk/CurrencyExchangeApp" target="_blank">Currency Exchange App</a></h3>
-                <p>Приложение для обмена валют по разным курсам с использованием REST API.</p>
+            <div id="projects-list">
+                <div class="project">
+                    <h3><a href="https://github.com/PavelOkhrimchuk/CurrencyExchangeApp" target="_blank">Currency Exchange App</a></h3>
+                    <p>Приложение для обмена валют по разным курсам с использованием REST API.</p>
+                </div>
+                <div class="project">
+                    <h3><a href="https://github.com/PavelOkhrimchuk/MatchScoreTracker" target="_blank">Match Score Tracker</a></h3>
+                    <p>Инструмент для подсчёта результатов теннисного матча.</p>
+                </div>
+                <div class="project">
+                    <h3><a href="https://github.com/PavelOkhrimchuk/WeatherApp" target="_blank">Weather App</a></h3>
+                    <p>Приложение для индивидуального просмотра прогноза погоды</p>
+                </div>
             </div>
-            <div class="project">
-                <h3><a href="https://github.com/PavelOkhrimchuk/MatchScoreTracker" target="_blank">Match Score Tracker</a></h3>
-                <p>Инструмент для подсчёта результатов теннисного матча.</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/PavelOkhrimchuk/WeatherApp" target="_blank">Weather App</a></h3>
-                <p>Приложение для индивидуального просмотра прогноза погоды</p>
-            </div>
-            <div class="project">
-                <h3>GymOhrim (в разработке)</h3>
-                <p>Приложение для отслеживания тренировок, питания и статистики.</p>
-            </div>
-            <div class="project">
-                <h3>EventCollab (групповой проект)</h3>
-                <p>Платформа для совместного управления мероприятиями.</p>
+
+            <button id="add-project-btn" class="btn">Добавить проект</button>
+
+            <div id="project-form" style="display: none;">
+                <h3>Добавить новый проект</h3>
+                <input type="text" id="project-title" placeholder="Название проекта" required>
+                <textarea id="project-description" placeholder="Описание проекта" required></textarea>
+                <button id="submit-project-btn" class="btn">Добавить</button>
             </div>
         </div>
         <div class="skills">
             <h2>Навыки</h2>
-            <ul>
+            <ul id="skills-list">
                 <li>Java</li>
                 <li>SQL (PostgreSQL, MySQL)</li>
                 <li>Redis</li>
@@ -67,16 +82,50 @@
                 <li>Maven</li>
                 <li>Gradle</li>
             </ul>
+            <button id="add-skill-btn" class="btn">Добавить навык</button>
+            <div id="skill-form" style="display: none;">
+                <h3>Добавить новый навык</h3>
+                <input type="text" id="skill-name" placeholder="Название навыка" required>
+                <button id="submit-skill-btn" class="btn">Добавить</button>
+            </div>
         </div>
     </section>
+
+
+
+    <section id="slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="images\image1.png" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="images\image2.png" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="images\image3.png" alt="Image 3">
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+
+
+
 </main>
 
 <footer>
     <section id="contacts">
-    <p>Связаться</p>
-    <p>Email: okhrimchuk.pavel2005@gmail.com</p>
-    <p>Telegram: <a href="https://t.me/ohrimmm" target="_blank">t.me/ohrimmm</a></p>
+        <p>Связаться</p>
+        <p>Email: okhrimchuk.pavel2005@gmail.com</p>
+        <p>Telegram: <a href="https://t.me/ohrimmm" target="_blank">t.me/ohrimmm</a></p>
     </section>
 </footer>
+
+<script src="/script.js"></script>
+<script src="/slider.js"></script>
+<script src="/theme-switcher.js"></script>
+<script src="/info.js"></script>
+
 </body>
 </html>
